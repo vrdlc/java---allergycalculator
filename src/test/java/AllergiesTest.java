@@ -13,9 +13,18 @@ public class AllergiesTest {
     assertEquals(arrayList, allergiesTest.giveAllergens (3));
   }
 
-  // @Test
-  // public void giveAllergens_returnsArrayOfAllAllergensWhenGivenScoreOf255_allAllergens() {
-  //   Allergies allergiesTest = new Allergies();
-  //   assertEquals("[]")
-  // }
+  @Test
+  public void giveAllergens_returnsArrayOfAllergensWhenGivenAllergyScore_allAllergens() {
+    Allergies allergiesTest = new Allergies();
+    ArrayList<String> arrayList = new ArrayList<String>();
+    arrayList.add("cats");
+    arrayList.add("pollen");
+    arrayList.add("chocolate");
+    arrayList.add("tomatoes");
+    arrayList.add("strawberries");
+    arrayList.add("shellfish");
+    arrayList.add("peanuts");
+    arrayList.add("eggs");
+    assertEquals(arrayList, allergiesTest.giveAllergens (255));
+  }
 }
